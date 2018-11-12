@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AEF39DF320E3895200A560F3 /* UserProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF39DF220E3895200A560F3 /* UserProperties.swift */; };
 		57470F7E20ED0D1A000CDCA3 /* DownloadSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57470F7D20ED0D1A000CDCA3 /* DownloadSession.swift */; };
+		AEF39DF320E3895200A560F3 /* UserProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF39DF220E3895200A560F3 /* UserProperties.swift */; };
+		C3EB74E3219868E6008D0242 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EB74DF219868DB008D0242 /* ObjectMapper.framework */; };
 		F32314A21F8616C2000FCFB0 /* Drm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32314A11F8616C2000FCFB0 /* Drm.swift */; };
 		F34CB2891FC56CAD005E3A37 /* DrmLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34CB2881FC56CAD005E3A37 /* DrmLicense.swift */; };
-		F39E9E6F1FC2E1B70098F77E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E7D4201F4ECA9800DF166D /* ObjectMapper.framework */; };
 		F3B187A01FA33D4D00BB46BF /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1879F1FA33D4D00BB46BF /* Feed.swift */; };
 		F3B187A21FA33DFA00BB46BF /* Facet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B187A11FA33DFA00BB46BF /* Facet.swift */; };
 		F3B187A41FA33E1D00BB46BF /* OpdsMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B187A31FA33E1D00BB46BF /* OpdsMetadata.swift */; };
@@ -38,8 +38,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AEF39DF220E3895200A560F3 /* UserProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProperties.swift; sourceTree = "<group>"; };
 		57470F7D20ED0D1A000CDCA3 /* DownloadSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadSession.swift; sourceTree = "<group>"; };
+		AEF39DF220E3895200A560F3 /* UserProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProperties.swift; sourceTree = "<group>"; };
+		C3EB74DE219868DB008D0242 /* 14DBFE50-704A-3A71-965B-893E9D964E12.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "14DBFE50-704A-3A71-965B-893E9D964E12.bcsymbolmap"; sourceTree = "<group>"; };
+		C3EB74DF219868DB008D0242 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
+		C3EB74E0219868DB008D0242 /* 10CD5278-898C-3771-A56F-086B2DA717A3.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "10CD5278-898C-3771-A56F-086B2DA717A3.bcsymbolmap"; sourceTree = "<group>"; };
+		C3EB74E1219868DB008D0242 /* ObjectMapper.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ObjectMapper.framework.dSYM; sourceTree = "<group>"; };
+		C3EB74E2219868DB008D0242 /* .ObjectMapper.version */ = {isa = PBXFileReference; lastKnownFileType = text; path = .ObjectMapper.version; sourceTree = "<group>"; };
+		C3EC684721986183007EEEC1 /* Pods_R2TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_R2TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EC684F2198622E007EEEC1 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EC685121986234007EEEC1 /* Pods_R2TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_R2TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32314A11F8616C2000FCFB0 /* Drm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drm.swift; sourceTree = "<group>"; };
 		F34CB2881FC56CAD005E3A37 /* DrmLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrmLicense.swift; sourceTree = "<group>"; };
 		F3B1879F1FA33D4D00BB46BF /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
@@ -75,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F39E9E6F1FC2E1B70098F77E /* ObjectMapper.framework in Frameworks */,
+				C3EB74E3219868E6008D0242 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +96,27 @@
 				57470F7D20ED0D1A000CDCA3 /* DownloadSession.swift */,
 			);
 			path = Toolkit;
+			sourceTree = "<group>";
+		};
+		C3EB74DC219868DB008D0242 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				C3EB74DD219868DB008D0242 /* iOS */,
+				C3EB74E2219868DB008D0242 /* .ObjectMapper.version */,
+			);
+			name = Build;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+		C3EB74DD219868DB008D0242 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C3EB74DE219868DB008D0242 /* 14DBFE50-704A-3A71-965B-893E9D964E12.bcsymbolmap */,
+				C3EB74DF219868DB008D0242 /* ObjectMapper.framework */,
+				C3EB74E0219868DB008D0242 /* 10CD5278-898C-3771-A56F-086B2DA717A3.bcsymbolmap */,
+				C3EB74E1219868DB008D0242 /* ObjectMapper.framework.dSYM */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		F34CB28A1FC5714D005E3A37 /* Drm */ = {
@@ -192,6 +221,10 @@
 		F3E7D41F1F4ECA9800DF166D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3EB74DC219868DB008D0242 /* Build */,
+				C3EC685121986234007EEEC1 /* Pods_R2TestApp.framework */,
+				C3EC684F2198622E007EEEC1 /* ObjectMapper.framework */,
+				C3EC684721986183007EEEC1 /* Pods_R2TestApp.framework */,
 				F3E7D4201F4ECA9800DF166D /* ObjectMapper.framework */,
 			);
 			name = Frameworks;
@@ -228,6 +261,7 @@
 				F3E7D3F01F4EBE2100DF166D /* Frameworks */,
 				F3E7D3F11F4EBE2100DF166D /* Headers */,
 				F3E7D3F21F4EBE2100DF166D /* Resources */,
+				C3EB74FE21986BF3008D0242 /* Carthage Run Script */,
 			);
 			buildRules = (
 			);
@@ -280,6 +314,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C3EB74FE21986BF3008D0242 /* Carthage Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+			);
+			name = "Carthage Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F3E7D3EF1F4EBE2100DF166D /* Sources */ = {
