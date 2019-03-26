@@ -1,5 +1,5 @@
 //
-//  Facet.swift
+//  Price.swift
 //  r2-shared-swift
 //
 //  Created by Alexandre Camilleri on 10/27/17.
@@ -9,12 +9,15 @@
 //  in the LICENSE file present in the project repository where this source code is maintained.
 //
 
-/// Enables faceted navigation in OPDS.
-public class Facet {
-    public var metadata: OpdsMetadata
-    public var links = [Link]()
+import Foundation
 
-    public init(title: String) {
-        self.metadata = OpdsMetadata(title: title)
+/// Price related to a publication
+public class Price {
+    public var currency: String
+    public var value: Double
+    
+    public init(currency: String, value: Double) {
+        self.currency = currency
+        self.value = value
     }
 }
