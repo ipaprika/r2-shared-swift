@@ -52,6 +52,7 @@ public class Link: JSONEquatable {
     /// Resources that are children of the linked resource, in the context of a given collection role.
     public var children: [Link]
 
+    /// WARNING: This feature is in beta and the API is subject to change in the future.
     /// FIXME: This is used when parsing EPUB's media overlays, but maybe it should be stored somewhere else? For example, as a JSON object in Link.properties.otherProperties, with high-level helpers to get the MediaOverlayNode in the EPUBProperties extension.
     /// The MediaOverlays associated to the resource of the `Link`.
     public var mediaOverlays = MediaOverlays()
@@ -80,7 +81,7 @@ public class Link: JSONEquatable {
         guard let json = json as? [String: Any],
             let href = json["href"] as? String else
         {
-            throw JSONParsingError.link
+            throw JSONError.parsing(Link.self)
         }
         self.href = normalizeHref(href)
         self.type = json["type"] as? String
@@ -131,16 +132,39 @@ extension Array where Element == Link {
         return map { $0.json }
     }
     
-    public func first(withRel rel: String) -> Link? {
-        return first { $0.rels.contains(rel) }
+    public func first(withRel rel: String, recursively: Bool = false) -> Link? {
+        return first(recursively: recursively) { $0.rels.contains(rel) }
     }
     
-    public func first(withHref href: String) -> Link? {
-        return first { $0.href == href }
+    public func first(withHref href: String, recursively: Bool = false) -> Link? {
+        return first(recursively: recursively) { $0.href == href }
     }
     
-    public func first<T: Equatable>(withProperty otherProperty: String, matching: T) -> Link? {
-        return first { ($0.properties.otherProperties[otherProperty] as? T) == matching }
+    public func first<T: Equatable>(withProperty otherProperty: String, matching: T, recursively: Bool = false) -> Link? {
+        return first(recursively: recursively) { ($0.properties.otherProperties[otherProperty] as? T) == matching }
+    }
+    
+    /// Finds the first link matching the given predicate.
+    ///
+    /// - Parameter recursively: Finds links recursively through `children`.
+    public func first(recursively: Bool, where predicate: (Link) -> Bool) -> Link? {
+        if !recursively {
+            return first(where: predicate)
+        }
+        
+        for link in self {
+            if predicate(link) {
+                return link
+            }
+            if let childLink = link.children.first(recursively: true, where: predicate) {
+                return childLink
+            }
+        }
+        return nil
+    }
+    
+    public func firstIndex(withHref href: String) -> Int? {
+        return firstIndex { $0.href == href }
     }
 
 }
